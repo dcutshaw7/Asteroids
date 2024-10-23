@@ -40,7 +40,7 @@ def main():
 			for shot in updatable:
 				if isinstance(shot, Shot): 
 					if asteroid.is_colliding_with(shot):
-						asteroid.kill()
+						asteroid.split(dt)						
 						shot.kill()
 		screen.fill((0,0,0)) 
 		for sprite in drawable: 
